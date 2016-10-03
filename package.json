@@ -1,0 +1,63 @@
+{
+  "name": "angular2-starter",
+  "version": "1.0.0",
+  "description": "Simple seed project for Angular2 apps",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf node_modules dist && npm cache clean",
+    "build": "webpack --progress --profile",
+    "watch": "webpack --watch --progress --profile",
+    "server": "webpack-dev-server --progress --profile --watch --content-base dist/",
+    "start": "npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitkm/angular2-starter.git"
+  },
+  "author": "Karmazin Dmitry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitkm/angular2-starter/issues"
+  },
+  "homepage": "https://github.com/dmitkm/angular2-starter#readme",
+  "dependencies": {
+    "@angular/common": "^2.0.1",
+    "@angular/compiler": "^2.0.1",
+    "@angular/core": "^2.0.1",
+    "@angular/forms": "^2.0.1",
+    "@angular/http": "^2.0.1",
+    "@angular/platform-browser": "^2.0.1",
+    "@angular/platform-browser-dynamic": "^2.0.1",
+    "@angular/router": "^3.0.1",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "^5.0.0-beta.12",
+    "zone.js": "^0.6.25"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.34",
+    "@types/node": "^6.0.41",
+    "angular2-template-loader": "^0.5.0",
+    "autoprefixer": "^6.5.0",
+    "awesome-typescript-loader": "^2.2.4",
+    "codelyzer": "^1.0.0-beta.0",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "node-sass": "^3.10.0",
+    "postcss-loader": "^0.13.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.2",
+    "string-replace-loader": "^1.0.5",
+    "style-loader": "^0.13.1",
+    "ts-helpers": "^1.1.1",
+    "tslint": "^3.15.1",
+    "tslint-loader": "^2.1.5",
+    "typescript": "^2.0.3",
+    "typings": "^1.4.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^2.1.0-beta.5"
+  }
+}
