@@ -5,6 +5,7 @@ var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin,
     autoprefixer = require('autoprefixer'),
     ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin,
     HtmlWebpackPlugin = require('html-webpack-plugin'),
+    CopyWebpackPlugin = require('copy-webpack-plugin'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
@@ -89,7 +90,7 @@ var config = {
         }),
         new ForkCheckerPlugin(),
         new HtmlWebpackPlugin({
-            template:'dist/index.html',
+            template:'src/public/index.html',
             inject: 'body',
             chunksSortMode: 'dependency'
         }),
@@ -103,6 +104,9 @@ var config = {
                 ]
             }
         }),
+        new CopyWebpackPlugin([
+            // to {output}/**/*
+            { from: path.resolve(__dirname,'src/public') }]),
         new webpack.LoaderOptionsPlugin({
             options: {
                 context: __dirname,
