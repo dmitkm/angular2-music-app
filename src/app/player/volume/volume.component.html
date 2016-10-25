@@ -1,0 +1,13 @@
+<div class="volume_wrapper">
+  <div class="volume_icon">
+    <a href=""><img src="./img/svg/mute.svg" alt="volume-off" *ngIf="mute"></a>
+    <a href=""><img src="./img/svg/mute-off.svg" alt="volume" *ngIf="!mute"></a>
+  </div>
+  <div class="drag_area">
+    <div class="volumeline" draggable (position)="volumeHandler($event)">
+      <div class="backgroundLine"></div>
+      <div class="line"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+</div>

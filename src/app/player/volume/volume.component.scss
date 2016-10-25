@@ -1,0 +1,75 @@
+div{
+  
+}
+.volume_wrapper{
+  //padding: 12px;
+}
+.volume_icon{
+  display: inline-block;
+  margin: 14px 3px 10px;
+  width:18%;
+  padding: 5px;
+}
+a>img{
+  margin: 0 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.drag_area{
+  display: inline-block;
+  width: 70%;
+  height: 20px;
+  &:hover{
+    cursor:pointer;
+    .volumeline{
+      .dot{
+        opacity: 1;
+      }
+    }
+  }
+
+}
+.volumeline{ 
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 2px 0;
+  border-radius: 2px;
+}
+.backgroundLine { 
+    position: absolute;
+    top:48%;
+    left:0;
+    width: 100%;
+    height: 2px;
+    background-color:  #545454;
+     
+}
+.line{
+  position: absolute;
+  top: 48%;
+  left: 0;
+  width: 90%;
+  height: 2px;
+  background-color: #a0ad92;
+}
+.dot{
+  opacity: 0;
+    position: absolute;
+    left: 7px;
+    top: 53%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    //box-shadow: inset 2px -2px 2px rgba(0, 0, 1,.6);
+    border: 2px solid white;
+    background-color: white;
+    transform: translateX(-50%) translateY(-50%);
+    transition: opacity 0.25s ease-in-out, box-shadow 0.5s ease-in-out;
+    &:hover {
+      box-shadow: inset 0 0 0 10px rgba(0, 0, 0,.8);
+    }
+}

@@ -1,0 +1,18 @@
+<div class="columns">
+  <div class="column is-4 is-offset-4">
+    <form>
+      <div class="control">
+        <input class="input" type="text" #search
+        (keyup) = "onChangeSearch(search.value)"
+        (blur) = "onChangeSearch(search.value)"
+        placeholder="Search...">
+      </div>
+    </form>
+    <div class="result" *ngIf="result">
+          <div class="result_item " *ngFor="let song of result" (click)="play(song)">
+              <p>{{song.name}}</p>   
+          </div>
+    </div>
+  </div>
+</div>
+

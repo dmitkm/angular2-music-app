@@ -1,0 +1,19 @@
+
+ <div class="columns">
+   <div class="column is-1" >
+     <song-label [song]="song"></song-label>
+   </div>
+   <div class="column is-8">
+
+    <control [song]="song" [playing]="isPlaying" [currentTime]="currentTime" [totalTime]="totalTime" [buffered]="buffered"></control>
+     <!--<control></control>-->
+   </div>
+   <div class="column is-1">
+    <time-info [currentTime]="currentTime" [totalTime]="totalTime"></time-info>
+     <!--<time-info></time-info>-->
+   </div>
+   <div class="column is-2">
+     <volume [muted]="isMute"></volume>
+   </div>
+ </div>
+

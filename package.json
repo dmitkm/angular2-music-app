@@ -1,7 +1,7 @@
 {
-  "name": "angular2-starter",
-  "version": "1.0.0",
-  "description": "Simple seed project for Angular2 apps",
+  "name": "music-app",
+  "version": "0.0.1",
+  "description": "Angular2 app base on Soundcloud",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf node_modules dist && npm cache clean",
@@ -29,14 +29,20 @@
     "@angular/platform-browser": "^2.0.1",
     "@angular/platform-browser-dynamic": "^2.0.1",
     "@angular/router": "^3.0.1",
+    "@types/soundjs": "^0.6.27",
+    "bulma": "^0.2.1",
     "core-js": "^2.4.1",
+    "createjs-soundjs": "^0.6.2",
+    "lodash": "^4.16.4",
     "reflect-metadata": "^0.1.8",
     "rxjs": "^5.0.0-beta.12",
     "zone.js": "^0.6.25"
   },
   "devDependencies": {
     "@types/core-js": "^0.9.34",
+    "@types/lodash": "^4.14.37",
     "@types/node": "^6.0.41",
+    "@types/soundjs": "^0.6.27",
     "angular2-template-loader": "^0.5.0",
     "autoprefixer": "^6.5.0",
     "awesome-typescript-loader": "^2.2.4",

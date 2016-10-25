@@ -1,0 +1,74 @@
+.controll-block{
+  padding: 10px 0;
+}
+.controls{
+ display: inline-block;
+ width: 15%;
+}
+a{
+  display: inline-block;
+  height: 30px;   
+  img {
+  margin: 0 2px;
+  width: 30px;
+  height: 30px;
+  }
+}
+
+
+.drag_area{
+  display: inline-block;
+  width: 83%;
+  margin: 4px 0;
+}
+.timeline {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+
+  &:hover{
+
+   cursor: pointer;
+   .dot{
+     opacity: 1;
+   }
+  }
+  .backgroundLine { 
+    position: absolute;
+    top:48%;
+    left:0;
+    width: 100%;
+    height: 2px;
+    background-color:  #545454;
+     
+  }
+  .line {
+
+    position:absolute;
+    top: 48%;
+    left: 0;
+    width: 75%;
+    height: 2px;
+    background-color: #59ffd5;
+  }
+  .dot {
+    opacity: 0;
+    position: absolute;
+    left: 7px;
+    top: 53%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    //box-shadow: inset 2px -2px 2px rgba(0, 0, 1,.6);
+    border: 2px solid white;
+    background-color: white;
+    transform: translateX(-50%) translateY(-50%);
+    transition: opacity 0.25s ease-in-out, box-shadow 0.5s ease-in-out;
+    &:hover {
+      box-shadow: inset 0 0 0 10px rgba(0, 0, 0,.8);
+    }
+  }
+}
+

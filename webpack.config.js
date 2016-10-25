@@ -62,6 +62,7 @@ var config = {
             test:/\.css$/, include:path.resolve(__dirname, 'src/app'),
           loader :'raw!postcss'
         },
+
         // support for .scss files
         // all scss in src/style
         { 
@@ -81,6 +82,9 @@ var config = {
             test: /\.html$/, loader: 'raw' 
         }
      ]
+    },
+    externals:{
+        createjs: 'createjs'
     },
     cache: true,
     //debug: !isProd,
@@ -115,7 +119,10 @@ var config = {
                     failOnHint: false
                 }
             }
-        })
+        }),
+        new webpack.ContextReplacementPlugin(
+         /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+        __dirname)
     ],
    
     devServer: {

@@ -1,0 +1,23 @@
+<div class="controll-block">
+  <div class="controls">
+    <a href="#" class="prev" (click)="prevSong()">
+      <img src="./img/svg/back.svg" alt="prev song">
+    </a>
+
+    <a href="#" class="playpause"  (click)=toggePlayPause()>
+      <img src="./img/svg/play.svg" alt="play" *ngIf="!isPlaying">
+      <img src="./img/svg/pause.svg" alt="pause" *ngIf="isPlaying">
+    </a>
+    <a  href="#" class="next" (click)=nextSong()>
+      <img src="./img/svg/next.svg" alt="prev song">
+    </a>
+  </div>
+  <div class="drag_area" >
+    <div class="timeline" draggable (position)="timelineHandle($event)">
+      <div class="backgroundLine"></div>
+      <div class="line" [ngStyle]="{width: updatePos()}">
+      </div>
+      <div class="dot" [ngStyle]="{left: updatePos()}"></div>
+    </div>
+  </div>  
+</div>
